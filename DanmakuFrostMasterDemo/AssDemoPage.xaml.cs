@@ -8,10 +8,14 @@ using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.UI;
 using Windows.UI.Popups;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Navigation;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Controls.Primitives;
+using Microsoft.UI.Xaml.Navigation;
+using Microsoft.UI;
+using Microsoft.UI.Windowing;
+using WinRT;
+using Windows.UI.Core;
 
 namespace DanmakuFrostMasterDemo
 {
@@ -24,7 +28,10 @@ namespace DanmakuFrostMasterDemo
         {
             InitializeComponent();
             NavigationCacheMode = NavigationCacheMode.Disabled;
-
+            if (AppWindowTitleBar.IsCustomizationSupported())
+            {
+                _btnBack.Visibility = Visibility.Collapsed;
+            }
             _danmakuTimer.Tick += _danmakuTimer_Tick;
         }
 
@@ -44,16 +51,20 @@ namespace DanmakuFrostMasterDemo
             base.OnNavigatedTo(args);
         }
 
+        protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
+        {
+            _mpe.MediaPlayer.Pause();
+
+            _danmakuTimer.Stop();
+            _danmakuController?.Stop();
+            base.OnNavigatingFrom(e);
+        }
+
         private void _btnBack_Click(object sender, RoutedEventArgs args)
         {
-            Frame rootFrame = Window.Current.Content as Frame;
+            Frame rootFrame = App.Window.NavigationFrame;
             if (rootFrame.CanGoBack)
             {
-                _mpe.MediaPlayer.Pause();
-
-                _danmakuTimer.Stop();
-                _danmakuController?.Stop();
-
                 rootFrame.GoBack();
             }
         }
@@ -88,19 +99,27 @@ namespace DanmakuFrostMasterDemo
 
         private async void _btnOpen_Click(object sender, RoutedEventArgs args)
         {
-            FileOpenPicker videoOpenPicker = new FileOpenPicker
+/*
+    TODO 你应将 "App.WindowHandle" 替换为窗口的句柄(HWND) 
+   请在此处阅读有关如何检索窗口句柄的详细信息: https://docs.microsoft.com/en-us/windows/apps/develop/ui-input/retrieve-hwnd
+*/
+            FileOpenPicker videoOpenPicker = InitializeWithWindow(new FileOpenPicker
             {
                 ViewMode = PickerViewMode.List,
                 SuggestedStartLocation = PickerLocationId.VideosLibrary,
-            };
+            },App.WindowHandle);
             videoOpenPicker.FileTypeFilter.Add(".mp4");
             StorageFile videoFile = await videoOpenPicker.PickSingleFileAsync();
+/*
+    TODO 你应将 "App.WindowHandle" 替换为窗口的句柄(HWND) 
+   请在此处阅读有关如何检索窗口句柄的详细信息: https://docs.microsoft.com/en-us/windows/apps/develop/ui-input/retrieve-hwnd
+*/
 
-            FileOpenPicker assOpenPicker = new FileOpenPicker
+            FileOpenPicker assOpenPicker = InitializeWithWindow(new FileOpenPicker
             {
                 ViewMode = PickerViewMode.List,
                 SuggestedStartLocation = PickerLocationId.VideosLibrary,
-            };
+            },App.WindowHandle);
             assOpenPicker.FileTypeFilter.Add(".ass");
             StorageFile assFile = await assOpenPicker.PickSingleFileAsync();
 
@@ -132,8 +151,15 @@ namespace DanmakuFrostMasterDemo
             else
             {
                 MessageDialog md = new MessageDialog($"Failed to open {(videoFile == null ? "video" : "ass")} file");
+                WinRT.Interop.InitializeWithWindow.Initialize(md, App.WindowHandle);
                 await md.ShowAsync();
             }
+        }
+
+        private static FileOpenPicker InitializeWithWindow(FileOpenPicker obj, IntPtr windowHandle)
+        {
+            WinRT.Interop.InitializeWithWindow.Initialize(obj, windowHandle);
+            return obj;
         }
 
         private void _cbDebugMode_Checked(object sender, RoutedEventArgs args)

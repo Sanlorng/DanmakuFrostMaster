@@ -5,9 +5,11 @@ using System.IO;
 using Windows.Media.Playback;
 using Windows.Storage;
 using Windows.UI;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Navigation;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Navigation;
+using Microsoft.UI;
+using Microsoft.UI.Windowing;
 
 namespace DanmakuFrostMasterDemo
 {
@@ -20,6 +22,10 @@ namespace DanmakuFrostMasterDemo
         {
             InitializeComponent();
             NavigationCacheMode = NavigationCacheMode.Disabled;
+            if (AppWindowTitleBar.IsCustomizationSupported())
+            {
+                _btnBack.Visibility = Visibility.Collapsed;
+            }
 
             _danmakuTimer.Tick += _danmakuTimer_Tick;
         }
@@ -55,15 +61,18 @@ namespace DanmakuFrostMasterDemo
 
             base.OnNavigatedTo(args);
         }
+        protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
+        {
+            Pause();
+            _danmakuController?.Stop();
+            base.OnNavigatingFrom(e);
+        }
 
         private void _btnBack_Click(object sender, RoutedEventArgs args)
         {
-            Frame rootFrame = Window.Current.Content as Frame;
+            Frame rootFrame = App.Window.NavigationFrame;
             if (rootFrame.CanGoBack)
             {
-                Pause();
-                _danmakuController?.Stop();
-
                 rootFrame.GoBack();
             }
         }

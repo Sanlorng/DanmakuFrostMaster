@@ -1,0 +1,207 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": true
+    },
+    "targetId": "",
+    "targetDisplayName": ".NET 8.0"
+  },
+  "analysisStartTime": "2024-09-06T19:22:07.7226304Z",
+  "analysisEndTime": "2024-09-06T19:31:54.2820702Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 2,
+      "issues": 3,
+      "incidents": 7,
+      "effort": 7
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 4,
+        "Optional": 0,
+        "Potential": 3,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 3,
+        "Project": 4
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "E:\\Documents\\Visual Studio Project\\DanmakuFrostMaster.WinUI\\DanmakuFrostMaster\\DanmakuFrostMaster.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 4,
+      "ruleInstances": [
+        {
+          "incidentId": "ec4b2317-7d5a-4c27-8cd4-76eaebd6eb6d",
+          "ruleId": "NuGet.0002",
+          "projectPath": "E:\\Documents\\Visual Studio Project\\DanmakuFrostMaster.WinUI\\DanmakuFrostMaster\\DanmakuFrostMaster.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.NETCore.UniversalWindowsPlatform, 6.2.10\n\n\u5EFA\u8BAE:\n\nMicrosoft.Graphics.Win2D 1.1.0,\nMicrosoft.Windows.Compatibility 8.0.8",
+              "protected": "Microsoft.NETCore.UniversalWindowsPlatform, 6.2.10\n\n\u5EFA\u8BAE:\n\nMicrosoft.Graphics.Win2D 1.1.0,\nMicrosoft.Windows.Compatibility 8.0.8"
+            },
+            "kind": "File",
+            "path": "E:\\Documents\\Visual Studio Project\\DanmakuFrostMaster.WinUI\\DanmakuFrostMaster\\DanmakuFrostMaster.csproj",
+            "snippet": "Microsoft.NETCore.UniversalWindowsPlatform, 6.2.10\n\n\u5EFA\u8BAE:\n\nMicrosoft.Graphics.Win2D 1.1.0,\nMicrosoft.Windows.Compatibility 8.0.8",
+            "protectedSnippet": "Microsoft.NETCore.UniversalWindowsPlatform, 6.2.10\n\n\u5EFA\u8BAE:\n\nMicrosoft.Graphics.Win2D 1.1.0,\nMicrosoft.Windows.Compatibility 8.0.8",
+            "label": "Microsoft.NETCore.UniversalWindowsPlatform 6.2.10"
+          }
+        },
+        {
+          "incidentId": "159623f4-4125-4bd6-af3a-96f4b3c43cfd",
+          "ruleId": "NuGet.0002",
+          "projectPath": "E:\\Documents\\Visual Studio Project\\DanmakuFrostMaster.WinUI\\DanmakuFrostMaster\\DanmakuFrostMaster.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Newtonsoft.Json, 13.0.1\n\n\u5EFA\u8BAE:\n\nNewtonsoft.Json 13.0.3",
+              "protected": "Newtonsoft.Json, 13.0.1\n\n\u5EFA\u8BAE:\n\nNewtonsoft.Json 13.0.3"
+            },
+            "kind": "File",
+            "path": "E:\\Documents\\Visual Studio Project\\DanmakuFrostMaster.WinUI\\DanmakuFrostMaster\\DanmakuFrostMaster.csproj",
+            "snippet": "Newtonsoft.Json, 13.0.1\n\n\u5EFA\u8BAE:\n\nNewtonsoft.Json 13.0.3",
+            "protectedSnippet": "Newtonsoft.Json, 13.0.1\n\n\u5EFA\u8BAE:\n\nNewtonsoft.Json 13.0.3",
+            "label": "Newtonsoft.Json 13.0.1"
+          }
+        },
+        {
+          "incidentId": "4b46adbe-6a20-4c3d-8868-02d2f09ac99a",
+          "ruleId": "Project.0001",
+          "projectPath": "E:\\Documents\\Visual Studio Project\\DanmakuFrostMaster.WinUI\\DanmakuFrostMaster\\DanmakuFrostMaster.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "File",
+            "path": "E:\\Documents\\Visual Studio Project\\DanmakuFrostMaster.WinUI\\DanmakuFrostMaster\\DanmakuFrostMaster.csproj"
+          }
+        },
+        {
+          "incidentId": "91483002-d947-4a08-a71b-600aaa7cc05e",
+          "ruleId": "Project.0002",
+          "projectPath": "E:\\Documents\\Visual Studio Project\\DanmakuFrostMaster.WinUI\\DanmakuFrostMaster\\DanmakuFrostMaster.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "\u5F53\u524D: .NETCore,Version=v5.0\n\u65B0\u5EFA: net8.0-windows10.0.22000.0",
+              "protected": "\u5F53\u524D: .NETCore,Version=v5.0\n\u65B0\u5EFA: net8.0-windows10.0.22000.0"
+            },
+            "kind": "File",
+            "path": "E:\\Documents\\Visual Studio Project\\DanmakuFrostMaster.WinUI\\DanmakuFrostMaster\\DanmakuFrostMaster.csproj",
+            "snippet": "\u5F53\u524D: .NETCore,Version=v5.0\n\u65B0\u5EFA: net8.0-windows10.0.22000.0",
+            "protectedSnippet": "\u5F53\u524D: .NETCore,Version=v5.0\n\u65B0\u5EFA: net8.0-windows10.0.22000.0"
+          }
+        }
+      ]
+    },
+    {
+      "path": "DanmakuFrostMasterDemo.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 3,
+      "ruleInstances": [
+        {
+          "incidentId": "5c8d3d93-048c-4999-b6ab-60e4846e8207",
+          "ruleId": "NuGet.0002",
+          "projectPath": "DanmakuFrostMasterDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.NETCore.UniversalWindowsPlatform, 6.2.10\n\n\u5EFA\u8BAE:\n\nMicrosoft.Graphics.Win2D 1.1.0,\nMicrosoft.Windows.Compatibility 8.0.8",
+              "protected": "Microsoft.NETCore.UniversalWindowsPlatform, 6.2.10\n\n\u5EFA\u8BAE:\n\nMicrosoft.Graphics.Win2D 1.1.0,\nMicrosoft.Windows.Compatibility 8.0.8"
+            },
+            "kind": "File",
+            "path": "DanmakuFrostMasterDemo.csproj",
+            "snippet": "Microsoft.NETCore.UniversalWindowsPlatform, 6.2.10\n\n\u5EFA\u8BAE:\n\nMicrosoft.Graphics.Win2D 1.1.0,\nMicrosoft.Windows.Compatibility 8.0.8",
+            "protectedSnippet": "Microsoft.NETCore.UniversalWindowsPlatform, 6.2.10\n\n\u5EFA\u8BAE:\n\nMicrosoft.Graphics.Win2D 1.1.0,\nMicrosoft.Windows.Compatibility 8.0.8",
+            "label": "Microsoft.NETCore.UniversalWindowsPlatform 6.2.10"
+          }
+        },
+        {
+          "incidentId": "2531255b-cf56-4ccd-848c-cee18a19d927",
+          "ruleId": "Project.0001",
+          "projectPath": "DanmakuFrostMasterDemo.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "File",
+            "path": "DanmakuFrostMasterDemo.csproj"
+          }
+        },
+        {
+          "incidentId": "62e5a567-f54f-4124-886c-ddad4540cf74",
+          "ruleId": "Project.0002",
+          "projectPath": "DanmakuFrostMasterDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "\u5F53\u524D: .NETCore,Version=v5.0\n\u65B0\u5EFA: net8.0-windows10.0.22000.0",
+              "protected": "\u5F53\u524D: .NETCore,Version=v5.0\n\u65B0\u5EFA: net8.0-windows10.0.22000.0"
+            },
+            "kind": "File",
+            "path": "DanmakuFrostMasterDemo.csproj",
+            "snippet": "\u5F53\u524D: .NETCore,Version=v5.0\n\u65B0\u5EFA: net8.0-windows10.0.22000.0",
+            "protectedSnippet": "\u5F53\u524D: .NETCore,Version=v5.0\n\u65B0\u5EFA: net8.0-windows10.0.22000.0"
+          }
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "description": "\u5EFA\u8BAE\u5BF9\u6240\u9009\u76EE\u6807\u6846\u67B6\u8FDB\u884C NuGet \u5305\u5347\u7EA7\u3002\n\n\u5EFA\u8BAE\u5C06\u6807\u51C6 .NET \u5305\u7684\u7248\u672C\u4E0E\u9879\u76EE\u9762\u5411\u7684 .NET \u7248\u672C\u5339\u914D\u3002\n\n\u4E00\u4E9B\u5176\u4ED6\u5305\u4E5F\u5DF2\u77E5\u66F4\u9002\u5408\u6240\u9009\u7684\u76EE\u6807\u6846\u67B6\u3002",
+      "label": "\u5EFA\u8BAE\u5347\u7EA7 NuGet \u5305",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0001": {
+      "id": "Project.0001",
+      "description": "\u9879\u76EE\u6587\u4EF6\u9700\u8981\u8F6C\u6362\u4E3A SDK \u6837\u5F0F\u3002\u65B0\u5F0F .NET Framework \u9879\u76EE\u9700\u8981\u66F4\u6539\u9879\u76EE\u6587\u4EF6\u683C\u5F0F\uFF0C\u5E76\u4F7F\u7528\u4E0E\u9879\u76EE\u98CE\u683C\u548C\u529F\u80FD\u5BF9\u5E94\u7684 SDK\u3002",
+      "label": "\u9879\u76EE\u6587\u4EF6\u9700\u8981\u8F6C\u6362\u4E3A SDK \u6837\u5F0F",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "\u4ECE .NET Framework \u79FB\u690D\u5230 .NET \u7684\u6982\u8FF0",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET \u9879\u76EE SDK",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in moderrn .NET frameworks (windows, iOS, Android etc).",
+      "label": "\u9700\u8981\u66F4\u6539\u9879\u76EE\u7684\u76EE\u6807\u6846\u67B6",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "\u4ECE .NET Framework \u79FB\u690D\u5230 .NET \u7684\u6982\u8FF0",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET \u9879\u76EE SDK",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}

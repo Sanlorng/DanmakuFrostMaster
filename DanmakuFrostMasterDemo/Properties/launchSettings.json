@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DanmakuFrostMasterDemo (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "DanmakuFrostMasterDemo (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

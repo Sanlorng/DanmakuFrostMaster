@@ -11,11 +11,13 @@ using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Windows.Foundation;
-using Windows.System;
+using Microsoft.Windows.System;
 using Windows.UI;
 using Windows.UI.Core;
-using Windows.UI.Text;
-using Windows.UI.Xaml;
+using Microsoft.UI.Text;
+using Microsoft.UI.Xaml;
+using Windows.System;
+using Microsoft.UI;
 
 namespace Atelier39
 {

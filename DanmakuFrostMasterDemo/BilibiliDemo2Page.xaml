@@ -23,7 +23,7 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <Button x:Name="_btnBack" Grid.Row="0" Style="{StaticResource NavigationBackButtonNormalStyle}" IsEnabled="{x:Bind Frame.CanGoBack, Mode=OneWay}" Click="_btnBack_Click"/>
+        <Button x:Name="_btnBack" Grid.Row="0" Style="{StaticResource TitleBarBackButtonStyle}" MinHeight="40" IsEnabled="{x:Bind Frame.CanGoBack, Mode=OneWay}" Click="_btnBack_Click"/>
 
         <TextBlock Grid.Row="1" Grid.ColumnSpan="4" Margin="12 0 4 4" FontSize="24" IsTextSelectionEnabled="True"
                    Text="Bilibili Danmaku Demo 2 (https://www.bilibili.com/video/BV1Ws411m7VY)"/>
